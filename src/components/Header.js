@@ -7,6 +7,7 @@ import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/userSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import Logo from "../Assets/MovieGPTlogo.png";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ const Header = () => {
 
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+      <img className="w-44 mx-auto md:mx-0" src={Logo} alt="logo" />
       {user && (
         <div className="flex p-2 justify-between">
           {showGptSearch && (
